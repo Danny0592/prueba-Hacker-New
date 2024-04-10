@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="AuthorEntity" representedClassName="AuthorEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="fullyHighlighted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="matchedWords" optional="YES" attributeType="String"/>
+        <attribute name="matchLavel" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="HighlightResultEntity" representedClassName="HighlightResultEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="commentText" optional="YES" attributeType="String"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="commentTex" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="storyText" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="storyTitle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="storyURL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="title" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+        <relationship name="url" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AuthorEntity"/>
+    </entity>
+    <entity name="HitEntity" representedClassName="HitEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="children" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="commentText" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="createdAtI" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="numComments" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objetID1" optional="YES" attributeType="String"/>
+        <attribute name="parentID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="storyText" optional="YES" attributeType="String"/>
+        <attribute name="storyTitle" optional="YES" attributeType="String"/>
+        <attribute name="storyURL" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updateAt" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="highlightResult" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HighlightResultEntity"/>
+    </entity>
+</model>
